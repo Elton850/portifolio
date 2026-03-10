@@ -11,6 +11,26 @@
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover:hover { border-color: #60a5fa; transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 30px -15px rgba(96, 165, 250, 0.3); }
         .profile-border { border: 4px solid #1e293b; outline: 2px solid #60a5fa; }
+        
+        /* Estilos da Galeria e Overlay */
+        .img-overlay-container { position: relative; overflow: hidden; border-radius: 1rem; }
+        .img-blur { filter: blur(4px) grayscale(50%); transition: all 0.5s ease; }
+        .img-overlay-container:hover .img-blur { filter: blur(2px) grayscale(0%); transform: scale(1.05); }
+        .lock-overlay { 
+            position: absolute; inset: 0; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.6);
+            transition: opacity 0.3s;
+        }
+        .img-overlay-container:hover .lock-overlay { opacity: 0.2; }
+
+        /* Modal da Galeria */
+        .modal { display: none; position: fixed; z-index: 100; inset: 0; background: rgba(7, 10, 19, 0.98); }
+        .modal-content { max-width: 1000px; margin: auto; position: relative; top: 50%; transform: translateY(-50%); padding: 20px; text-align: center; }
+        .modal-img { max-height: 70vh; margin: auto; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .close-modal { position: absolute; top: -50px; right: 20px; color: #94a3b8; cursor: pointer; font-size: 30px; font-weight: bold; }
+        .close-modal:hover { color: white; }
+        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: #1e293b; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; cursor: pointer; transition: 0.3s; }
+        .nav-btn:hover { background: #3b82f6; }
     </style>
 </head>
 <body class="font-sans leading-relaxed">
@@ -33,51 +53,14 @@
                 <img src="https://media.licdn.com/dms/image/v2/D4D03AQEo9ii56thp0Q/profile-displayphoto-scale_400_400/B4DZzVXnUxHcAg-/0/1773106267039?e=1774483200&v=beta&t=wUm5vX8vPrgIIvNoDUHuT0qn3YTXSMAhFBrYYUguNWY" alt="Elton Alves" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover profile-border shadow-2xl">
                 <div class="absolute bottom-2 right-2 bg-green-500 w-4 h-4 rounded-full border-2 border-slate-900"></div>
             </div>
-            
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Analytics Engineer & <br><span class="gradient-text">Fullstack Developer</span></h1>
             <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-                Transformo processos manuais em ecossistemas de dados inteligentes. Especialista em **ERPs (TOTVS/SAP)**, **Python** e **IA Generativa**.
+                Especialista em **ERPs (TOTVS/SAP)**, **T-SQL** e **Python**. 
+                Automatizo auditorias milionárias com foco em 100% de acuracidade.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#projetos" class="bg-blue-600 px-8 py-3 rounded-xl font-bold hover:scale-105 transition shadow-lg">Ver Cases de Sucesso</a>
                 <a href="https://github.com/Elton850" target="_blank" class="bg-slate-800 border border-slate-700 px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="py-20 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Expertise que gera valor</h2>
-                <p class="text-slate-400 mb-4 leading-relaxed">
-                    Com vivência em grandes operações, automatizei o controle de mais de **R$ 7 milhões** em folha de pagamento, eliminando erros de conferência manual.
-                </p>
-                <div class="p-4 mt-6 bg-blue-900/20 border border-blue-500/30 rounded-lg inline-flex items-center gap-3">
-                    <i class="fas fa-certificate text-blue-400 text-2xl"></i>
-                    <div>
-                        <p class="text-xs uppercase tracking-widest text-blue-400 font-bold">Certificação Internacional</p>
-                        <p class="text-sm font-semibold">Master Creative - Full Stack Programming (Infinity School)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center">
-                    <p class="text-3xl font-bold text-blue-400 mb-1">40%</p>
-                    <p class="text-xs text-slate-500 uppercase">Mais agilidade com IA</p>
-                </div>
-                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center">
-                    <p class="text-3xl font-bold text-blue-400 mb-1">100%</p>
-                    <p class="text-xs text-slate-500 uppercase">Acuracidade nos Dados</p>
-                </div>
-                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center col-span-2">
-                    <div class="flex justify-center gap-6 text-2xl">
-                        <i class="fab fa-python text-yellow-500" title="Python"></i>
-                        <i class="fas fa-database text-blue-500" title="SQL Server"></i>
-                        <i class="fas fa-chart-bar text-yellow-400" title="Power BI"></i>
-                        <i class="fab fa-js-square text-blue-400" title="TypeScript"></i>
-                        <i class="fas fa-robot text-purple-400" title="IA"></i>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -87,13 +70,25 @@
             <h2 class="text-3xl font-bold mb-12">Projetos em Destaque</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 
-                <div class="bg-slate-800/30 p-8 rounded-3xl border border-slate-800 card-hover flex flex-col justify-between">
-                    <div>
-                        <div class="text-green-500 mb-6"><i class="fas fa-hand-holding-usd text-2xl"></i></div>
-                        <h3 class="text-xl font-bold mb-3">Auditoria Folha x Ponto</h3>
-                        <p class="text-slate-400 text-sm mb-6">Pipeline SQL para conciliação automática de **R$ 7M+** mensais. Redução de passivo e erros manuais.</p>
+                <div class="bg-slate-800/30 p-6 rounded-3xl border border-slate-800 card-hover flex flex-col cursor-pointer transition" onclick="openGallery()">
+                    <div class="img-overlay-container mb-6 border border-slate-700">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=500" alt="Dashboard Principal" class="img-blur w-full h-40 object-cover">
+                        <div class="lock-overlay">
+                            <i class="fas fa-expand text-white/50 text-2xl mb-2"></i>
+                            <span class="text-[10px] text-white/70 uppercase font-bold tracking-widest">Ver Galeria de Indicadores</span>
+                        </div>
                     </div>
-                    <span class="text-xs font-bold text-slate-600 uppercase tracking-widest italic">Case Corporativo</span>
+                    <div class="flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-hand-holding-usd text-green-500"></i>
+                            <h3 class="text-xl font-bold">Auditoria Folha x Ponto</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6">Pipeline SQL para conciliação automática de **R$ 7M+** mensais. Redução de passivo e erros de integração ERP.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Stack: T-SQL • Power BI</span>
+                        <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded border border-blue-500/20 font-bold italic">CASE CORPORATIVO</span>
+                    </div>
                 </div>
 
                 <div class="bg-slate-800/30 p-8 rounded-3xl border border-slate-800 card-hover flex flex-col justify-between">
@@ -109,7 +104,7 @@
                     <div>
                         <div class="text-purple-500 mb-6"><i class="fas fa-robot text-2xl"></i></div>
                         <h3 class="text-xl font-bold mb-3">Automação IA-Augmented</h3>
-                        <p class="text-slate-400 text-sm mb-6">Uso de IA para aceleração de scripts de extração e Web Scraping, otimizando o tempo de entrega em 40%.</p>
+                        <p class="text-slate-400 text-sm mb-6">Uso de IA para aceleração de scripts de extração e Web Scraping, otimizando entregas em 40%.</p>
                     </div>
                     <a href="https://github.com/Elton850" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Ver Soluções →</a>
                 </div>
@@ -118,17 +113,86 @@
         </div>
     </section>
 
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeGallery()">&times;</span>
+            <img id="currentImg" src="" class="modal-img shadow-2xl">
+            <p id="imgCaption" class="mt-6 text-blue-400 font-bold tracking-wide uppercase text-sm"></p>
+            <p class="text-slate-500 text-xs mt-1">Imagens descaracterizadas conforme LGPD</p>
+            
+            <div class="nav-btn left-5 md:-left-20" onclick="changeImg(-1)"><i class="fas fa-chevron-left"></i></div>
+            <div class="nav-btn right-5 md:-right-20" onclick="changeImg(1)"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+
     <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
         <div class="mb-6 flex justify-center gap-6">
             <a href="https://github.com/Elton850" target="_blank" class="hover:text-white transition"><i class="fab fa-github fa-lg"></i></a>
             <a href="https://www.linkedin.com/in/eltonalves-analytics/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin fa-lg"></i></a>
             <a href="https://wa.me/5585992199223" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp fa-lg"></i></a>
         </div>
-        <p>© 2026 Elton Alves. Todos os direitos reservados.</p>
+        <p>© 2026 Elton Alves. Analytics Engineer.</p>
     </footer>
 
+    <script>
+        const images = [
+            { 
+                src: './img/folha.png', 
+                title: '01. Dashboard Executivo: Conciliação Financeira' 
+            },
+            { 
+                src: './img/batidas.png', 
+                title: '02. Auditoria de Ponto: Divergências Detectadas' 
+            },
+            { 
+                src: './img/modelagem.png', 
+                title: '03. Arquitetura: Modelagem Star Schema (SQL Server)' 
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function openGallery() {
+            document.getElementById('galleryModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+            updateImage();
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Destrava o scroll
+        }
+
+        function updateImage() {
+            const imgElement = document.getElementById('currentImg');
+            const captionElement = document.getElementById('imgCaption');
+            
+            imgElement.src = images[currentIndex].src;
+            captionElement.innerText = images[currentIndex].title;
+        }
+
+        function changeImg(step) {
+            currentIndex += step;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            updateImage();
+        }
+
+        // Fecha se clicar na área escura
+        window.onclick = function(event) {
+            const modal = document.getElementById('galleryModal');
+            if (event.target == modal) closeGallery();
+        }
+
+        // Suporte a teclas (Esc e Setas)
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('galleryModal').style.display === 'block') {
+                if (e.key === "Escape") closeGallery();
+                if (e.key === "ArrowRight") changeImg(1);
+                if (e.key === "ArrowLeft") changeImg(-1);
+            }
+        });
+    </script>
+
 </body>
-
 </html>
-
-
