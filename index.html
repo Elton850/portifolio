@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elton Alves | Analytics Engineer & Fullstack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { border-color: #60a5fa; transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 30px -15px rgba(96, 165, 250, 0.3); }
+        .profile-border { border: 4px solid #1e293b; outline: 2px solid #60a5fa; }
+    </style>
+</head>
+<body class="font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold gradient-text tracking-tighter">ELTON.ALVES</span>
+            <div class="space-x-8 hidden md:flex text-sm font-medium">
+                <a href="#home" class="hover:text-blue-400 transition">Início</a>
+                <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+                <a href="#projetos" class="hover:text-blue-400 transition">Projetos</a>
+                <a href="https://wa.me/5585992199223" target="_blank" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-40 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="relative inline-block mb-8">
+                <img src="SUA_FOTO_AQUI" alt="Elton Alves" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover profile-border shadow-2xl">
+                <div class="absolute bottom-2 right-2 bg-green-500 w-4 h-4 rounded-full border-2 border-slate-900"></div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Analytics Engineer & <br><span class="gradient-text">Fullstack Developer</span></h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                Transformo processos manuais em ecossistemas de dados inteligentes. Especialista em **ERPs (TOTVS/SAP)**, **Python** e **IA Generativa**.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="bg-blue-600 px-8 py-3 rounded-xl font-bold hover:scale-105 transition shadow-lg">Ver Cases de Sucesso</a>
+                <a href="https://github.com/Elton850" target="_blank" class="bg-slate-800 border border-slate-700 px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Expertise que gera valor</h2>
+                <p class="text-slate-400 mb-4 leading-relaxed">
+                    Com vivência em grandes operações, automatizei o controle de mais de **R$ 7 milhões** em folha de pagamento, eliminando erros de conferência manual.
+                </p>
+                <div class="p-4 mt-6 bg-blue-900/20 border border-blue-500/30 rounded-lg inline-flex items-center gap-3">
+                    <i class="fas fa-certificate text-blue-400 text-2xl"></i>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-blue-400 font-bold">Certificação Internacional</p>
+                        <p class="text-sm font-semibold">Master Creative - Full Stack Programming (Infinity School)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center">
+                    <p class="text-3xl font-bold text-blue-400 mb-1">40%</p>
+                    <p class="text-xs text-slate-500 uppercase">Mais agilidade com IA</p>
+                </div>
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center">
+                    <p class="text-3xl font-bold text-blue-400 mb-1">100%</p>
+                    <p class="text-xs text-slate-500 uppercase">Acuracidade nos Dados</p>
+                </div>
+                <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700 text-center col-span-2">
+                    <div class="flex justify-center gap-6 text-2xl">
+                        <i class="fab fa-python text-yellow-500" title="Python"></i>
+                        <i class="fas fa-database text-blue-500" title="SQL Server"></i>
+                        <i class="fas fa-chart-bar text-yellow-400" title="Power BI"></i>
+                        <i class="fab fa-js-square text-blue-400" title="TypeScript"></i>
+                        <i class="fas fa-robot text-purple-400" title="IA"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Projetos em Destaque</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-800/30 p-8 rounded-3xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-green-500 mb-6"><i class="fas fa-hand-holding-usd text-2xl"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Auditoria Folha x Ponto</h3>
+                        <p class="text-slate-400 text-sm mb-6">Pipeline SQL para conciliação automática de **R$ 7M+** mensais. Redução de passivo e erros manuais.</p>
+                    </div>
+                    <span class="text-xs font-bold text-slate-600 uppercase tracking-widest italic">Case Corporativo</span>
+                </div>
+
+                <div class="bg-slate-800/30 p-8 rounded-3xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-blue-500 mb-6"><i class="fas fa-tasks text-2xl"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Task Manager Fullstack</h3>
+                        <p class="text-slate-400 text-sm mb-6">Gestor de produtividade desenvolvido em **TypeScript**. Foco em UX e performance de sistema.</p>
+                    </div>
+                    <a href="https://github.com/Elton850/Task-Manager" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">GitHub →</a>
+                </div>
+
+                <div class="bg-slate-800/30 p-8 rounded-3xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-500 mb-6"><i class="fas fa-robot text-2xl"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Automação IA-Augmented</h3>
+                        <p class="text-slate-400 text-sm mb-6">Uso de IA para aceleração de scripts de extração e Web Scraping, otimizando o tempo de entrega em 40%.</p>
+                    </div>
+                    <a href="https://github.com/Elton850" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Ver Soluções →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div class="mb-6 flex justify-center gap-6">
+            <a href="https://github.com/Elton850" target="_blank" class="hover:text-white transition"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/eltonalves" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="https://wa.me/5585992199223" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+        </div>
+        <p>© 2026 Elton Alves. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
